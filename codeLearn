@@ -1,0 +1,1105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CodeLearn 2.0 | Learn. Build. Master.</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Inter,Segoe UI,Arial,sans-serif;
+}
+
+:root{
+    --bg:#f6f8fc;
+    --card:#ffffff;
+    --text:#172033;
+    --muted:#687386;
+    --primary:#635bff;
+    --secondary:#00b894;
+    --border:#e5e8ef;
+    --code:#111827;
+    --nav:#ffffffd9;
+    --shadow:0 15px 40px rgba(20,30,60,.08);
+}
+
+.dark{
+    --bg:#0b1020;
+    --card:#151b2e;
+    --text:#f3f5ff;
+    --muted:#a5aec4;
+    --border:#283149;
+    --nav:#10162ad9;
+    --shadow:0 15px 40px rgba(0,0,0,.3);
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    transition:.3s;
+}
+
+/* NAVBAR */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:var(--nav);
+    backdrop-filter:blur(15px);
+    border-bottom:1px solid var(--border);
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:800;
+    color:var(--primary);
+}
+
+.logo span{
+    color:var(--text);
+}
+
+.nav-links{
+    display:flex;
+    gap:25px;
+    list-style:none;
+}
+
+.nav-links a{
+    color:var(--text);
+    text-decoration:none;
+    font-weight:600;
+    font-size:14px;
+}
+
+.nav-links a:hover{
+    color:var(--primary);
+}
+
+.nav-actions{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.icon-btn{
+    border:1px solid var(--border);
+    background:var(--card);
+    color:var(--text);
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    cursor:pointer;
+}
+
+.menu{
+    display:none;
+}
+
+/* HERO */
+
+.hero{
+    max-width:1200px;
+    margin:auto;
+    padding:90px 20px 70px;
+    display:grid;
+    grid-template-columns:1.2fr .8fr;
+    gap:50px;
+    align-items:center;
+}
+
+.badge{
+    display:inline-block;
+    padding:8px 14px;
+    border-radius:30px;
+    background:#e9e7ff;
+    color:#5048df;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(42px,6vw,72px);
+    line-height:1;
+    margin-bottom:25px;
+    letter-spacing:-3px;
+}
+
+.gradient{
+    background:linear-gradient(90deg,#635bff,#00b894);
+    -webkit-background-clip:text;
+    color:transparent;
+}
+
+.hero p{
+    color:var(--muted);
+    font-size:18px;
+    line-height:1.7;
+    max-width:650px;
+}
+
+.buttons{
+    margin-top:30px;
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    padding:14px 22px;
+    border-radius:10px;
+    text-decoration:none;
+    font-weight:700;
+    display:inline-block;
+    cursor:pointer;
+    border:none;
+}
+
+.primary{
+    background:var(--primary);
+    color:white;
+}
+
+.outline{
+    border:1px solid var(--border);
+    color:var(--text);
+    background:var(--card);
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+}
+
+/* CODE CARD */
+
+.code-card{
+    background:var(--code);
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    transform:rotate(2deg);
+}
+
+.code-top{
+    padding:13px 18px;
+    background:#1c2435;
+    display:flex;
+    gap:7px;
+}
+
+.dot{
+    width:11px;
+    height:11px;
+    border-radius:50%;
+    background:#6b7280;
+}
+
+.code{
+    padding:25px;
+    color:#d1d5db;
+    line-height:1.8;
+    font-family:monospace;
+    font-size:14px;
+}
+
+.keyword{color:#c084fc}
+.tag{color:#60a5fa}
+.string{color:#86efac}
+.comment{color:#6b7280}
+
+/* STATS */
+
+.stats{
+    max-width:1150px;
+    margin:0 auto 70px;
+    padding:0 20px;
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.stat{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:16px;
+}
+
+.stat h2{
+    font-size:30px;
+}
+
+.stat p{
+    color:var(--muted);
+    margin-top:5px;
+}
+
+/* SECTION */
+
+.section{
+    max-width:1200px;
+    margin:auto;
+    padding:70px 20px;
+}
+
+.section-title{
+    text-align:center;
+    margin-bottom:45px;
+}
+
+.section-title h2{
+    font-size:38px;
+    margin-bottom:10px;
+}
+
+.section-title p{
+    color:var(--muted);
+}
+
+/* SEARCH */
+
+.search-box{
+    max-width:600px;
+    margin:0 auto 35px;
+}
+
+.search-box input{
+    width:100%;
+    padding:16px 20px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    outline:none;
+    background:var(--card);
+    color:var(--text);
+    font-size:15px;
+}
+
+/* COURSES */
+
+.courses{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:18px;
+}
+
+.course{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:25px;
+    border-radius:18px;
+    transition:.3s;
+}
+
+.course:hover{
+    transform:translateY(-7px);
+    box-shadow:var(--shadow);
+}
+
+.course-icon{
+    font-size:35px;
+    margin-bottom:18px;
+}
+
+.course h3{
+    margin-bottom:8px;
+}
+
+.course p{
+    color:var(--muted);
+    font-size:14px;
+    line-height:1.6;
+}
+
+.level{
+    display:inline-block;
+    margin-top:18px;
+    font-size:12px;
+    padding:5px 10px;
+    border-radius:20px;
+    background:#e9e7ff;
+    color:#5148dc;
+}
+
+.progress{
+    height:6px;
+    background:var(--border);
+    border-radius:20px;
+    margin-top:18px;
+    overflow:hidden;
+}
+
+.progress span{
+    display:block;
+    height:100%;
+    background:var(--primary);
+}
+
+/* ROADMAP */
+
+.roadmap{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.step{
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:18px;
+    position:relative;
+}
+
+.number{
+    width:45px;
+    height:45px;
+    border-radius:50%;
+    background:var(--primary);
+    color:white;
+    display:grid;
+    place-items:center;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+/* PLAYGROUND */
+
+.playground{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+}
+
+.editor,
+.output{
+    background:var(--code);
+    border-radius:16px;
+    overflow:hidden;
+}
+
+.editor textarea{
+    width:100%;
+    height:330px;
+    resize:none;
+    border:none;
+    outline:none;
+    padding:20px;
+    background:#111827;
+    color:#e5e7eb;
+    font-family:monospace;
+    font-size:14px;
+}
+
+.output iframe{
+    width:100%;
+    height:330px;
+    background:white;
+    border:0;
+}
+
+.run{
+    width:100%;
+    padding:14px;
+    background:var(--secondary);
+    border:0;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* QUIZ */
+
+.quiz{
+    max-width:700px;
+    margin:auto;
+    background:var(--card);
+    border:1px solid var(--border);
+    padding:30px;
+    border-radius:20px;
+}
+
+.option{
+    width:100%;
+    text-align:left;
+    padding:14px;
+    margin-top:10px;
+    border:1px solid var(--border);
+    background:var(--bg);
+    color:var(--text);
+    border-radius:10px;
+    cursor:pointer;
+}
+
+.option:hover{
+    border-color:var(--primary);
+}
+
+#quizResult{
+    margin-top:20px;
+    font-weight:bold;
+}
+
+/* CTA */
+
+.cta{
+    max-width:1100px;
+    margin:50px auto;
+    padding:65px 25px;
+    text-align:center;
+    border-radius:25px;
+    background:linear-gradient(120deg,#635bff,#00b894);
+    color:white;
+}
+
+.cta h2{
+    font-size:40px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    margin-bottom:25px;
+}
+
+/* FOOTER */
+
+footer{
+    border-top:1px solid var(--border);
+    padding:40px 20px;
+    text-align:center;
+    color:var(--muted);
+}
+
+.footer-logo{
+    font-size:25px;
+    font-weight:800;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/* ANIMATION */
+
+.reveal{
+    opacity:0;
+    transform:translateY(25px);
+    transition:opacity .7s,transform .7s;
+}
+
+.reveal.active{
+    opacity:1;
+    transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .hero{
+        grid-template-columns:1fr;
+        text-align:center;
+    }
+
+    .hero p{
+        margin:auto;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .code-card{
+        transform:none;
+    }
+
+    .courses{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .roadmap{
+        grid-template-columns:1fr;
+    }
+
+    .playground{
+        grid-template-columns:1fr;
+    }
+
+    .nav-links{
+        display:none;
+        position:absolute;
+        top:72px;
+        left:0;
+        width:100%;
+        padding:25px;
+        background:var(--card);
+        flex-direction:column;
+        border-bottom:1px solid var(--border);
+    }
+
+    .nav-links.show{
+        display:flex;
+    }
+
+    .menu{
+        display:block;
+    }
+}
+
+@media(max-width:550px){
+
+    .courses,
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .hero{
+        padding-top:60px;
+    }
+
+    .hero h1{
+        letter-spacing:-2px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<nav class="navbar">
+
+<div class="logo">Code<span>Learn</span></div>
+
+<ul class="nav-links" id="navLinks">
+<li><a href="#home">Home</a></li>
+<li><a href="#courses">Courses</a></li>
+<li><a href="#roadmap">Roadmap</a></li>
+<li><a href="#playground">Playground</a></li>
+<li><a href="#quiz">Quiz</a></li>
+</ul>
+
+<div class="nav-actions">
+<button class="icon-btn" onclick="toggleTheme()">☀</button>
+<button class="icon-btn menu" onclick="toggleMenu()">☰</button>
+</div>
+
+</nav>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="reveal">
+
+<span class="badge">🚀 Learn coding differently</span>
+
+<h1>
+Build your skills.<br>
+<span class="gradient">Create your future.</span>
+</h1>
+
+<p>
+CodeLearn is an interactive learning platform designed to help
+students understand programming through simple lessons,
+practice problems and real projects.
+</p>
+
+<div class="buttons">
+<a href="#courses" class="btn primary">Start Learning →</a>
+<a href="#playground" class="btn outline">Try Playground</a>
+</div>
+
+</div>
+
+
+<div class="code-card reveal">
+
+<div class="code-top">
+<span class="dot"></span>
+<span class="dot"></span>
+<span class="dot"></span>
+</div>
+
+<div class="code">
+
+<span class="comment">// Your first CodeLearn project</span><br>
+
+<span class="keyword">const</span>
+student = {<br>
+
+&nbsp;&nbsp;name:
+<span class="string">"Future Developer"</span>,<br>
+
+&nbsp;&nbsp;skills:
+<span class="string">"HTML + CSS + JS"</span>,<br>
+
+&nbsp;&nbsp;learning:
+<span class="keyword">true</span><br>
+
+};<br><br>
+
+<span class="keyword">function</span>
+<span class="tag">startLearning</span>() {<br>
+
+&nbsp;&nbsp;console.log(
+<span class="string">"Let's build!"</span>
+);<br>
+
+}
+
+</div>
+</div>
+
+</section>
+
+
+<!-- STATS -->
+
+<section class="stats reveal">
+
+<div class="stat">
+<h2>8+</h2>
+<p>Programming Tracks</p>
+</div>
+
+<div class="stat">
+<h2>120+</h2>
+<p>Learning Topics</p>
+</div>
+
+<div class="stat">
+<h2>50+</h2>
+<p>Practice Problems</p>
+</div>
+
+<div class="stat">
+<h2>24/7</h2>
+<p>Learning Access</p>
+</div>
+
+</section>
+
+
+<!-- COURSES -->
+
+<section class="section" id="courses">
+
+<div class="section-title reveal">
+<h2>Choose your <span class="gradient">path</span></h2>
+<p>Start with the technology you want to master.</p>
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="courseSearch"
+placeholder="🔍 Search a programming language..."
+onkeyup="searchCourses()">
+</div>
+
+<div class="courses" id="courseList">
+
+<div class="course reveal">
+<div class="course-icon">🌐</div>
+<h3>HTML</h3>
+<p>Learn how websites are structured using modern HTML.</p>
+<span class="level">Beginner</span>
+<div class="progress"><span style="width:75%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">🎨</div>
+<h3>CSS</h3>
+<p>Create beautiful layouts, animations and responsive websites.</p>
+<span class="level">Beginner</span>
+<div class="progress"><span style="width:55%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">⚡</div>
+<h3>JavaScript</h3>
+<p>Make websites interactive with powerful JavaScript concepts.</p>
+<span class="level">Intermediate</span>
+<div class="progress"><span style="width:40%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">🐍</div>
+<h3>Python</h3>
+<p>Learn programming fundamentals with simple Python syntax.</p>
+<span class="level">Beginner</span>
+<div class="progress"><span style="width:30%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">⚙️</div>
+<h3>C</h3>
+<p>Master programming fundamentals, functions and memory.</p>
+<span class="level">Intermediate</span>
+<div class="progress"><span style="width:25%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">🚀</div>
+<h3>C++</h3>
+<p>Explore OOP, STL, algorithms and advanced programming.</p>
+<span class="level">Advanced</span>
+<div class="progress"><span style="width:20%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">☕</div>
+<h3>Java</h3>
+<p>Understand object-oriented programming and application development.</p>
+<span class="level">Intermediate</span>
+<div class="progress"><span style="width:35%"></span></div>
+</div>
+
+<div class="course reveal">
+<div class="course-icon">🗄️</div>
+<h3>SQL</h3>
+<p>Learn databases, queries, joins and data management.</p>
+<span class="level">Intermediate</span>
+<div class="progress"><span style="width:45%"></span></div>
+</div>
+
+</div>
+</section>
+
+
+<!-- ROADMAP -->
+
+<section class="section" id="roadmap">
+
+<div class="section-title reveal">
+<h2>Your learning <span class="gradient">roadmap</span></h2>
+<p>A simple path from beginner to developer.</p>
+</div>
+
+<div class="roadmap">
+
+<div class="step reveal">
+<div class="number">01</div>
+<h3>Learn Fundamentals</h3>
+<p>
+Understand variables, conditions, loops, functions and
+basic programming logic.
+</p>
+</div>
+
+<div class="step reveal">
+<div class="number">02</div>
+<h3>Build Projects</h3>
+<p>
+Turn your knowledge into websites, applications and
+small programming projects.
+</p>
+</div>
+
+<div class="step reveal">
+<div class="number">03</div>
+<h3>Master Development</h3>
+<p>
+Learn advanced concepts, algorithms and build portfolio
+projects that demonstrate your skills.
+</p>
+</div>
+
+</div>
+</section>
+
+
+<!-- PLAYGROUND -->
+
+<section class="section" id="playground">
+
+<div class="section-title reveal">
+<h2>Practice <span class="gradient">Playground</span></h2>
+<p>Write HTML and instantly see the result.</p>
+</div>
+
+<div class="playground">
+
+<div class="editor reveal">
+
+<textarea id="codeEditor"><!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial;
+    text-align: center;
+    padding: 50px;
+}
+
+h1 {
+    color: #635bff;
+}
+</style>
+</head>
+
+<body>
+
+<h1>Hello, CodeLearn!</h1>
+<p>I am learning to code 🚀</p>
+
+</body>
+</html></textarea>
+
+<button class="run" onclick="runCode()">
+▶ RUN CODE
+</button>
+
+</div>
+
+<div class="output reveal">
+
+<iframe id="preview"></iframe>
+
+</div>
+
+</div>
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="section" id="quiz">
+
+<div class="section-title reveal">
+<h2>Quick <span class="gradient">Challenge</span></h2>
+<p>Test your programming knowledge.</p>
+</div>
+
+<div class="quiz reveal">
+
+<h3>Which HTML tag is used to create a hyperlink?</h3>
+
+<button class="option" onclick="checkAnswer(false)">
+&lt;link&gt;
+</button>
+
+<button class="option" onclick="checkAnswer(true)">
+&lt;a&gt;
+</button>
+
+<button class="option" onclick="checkAnswer(false)">
+&lt;href&gt;
+</button>
+
+<button class="option" onclick="checkAnswer(false)">
+&lt;url&gt;
+</button>
+
+<div id="quizResult"></div>
+
+</div>
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta reveal">
+
+<h2>Ready to start coding?</h2>
+
+<p>
+Don't just read code. Write it, test it and build something.
+</p>
+
+<a href="#playground" class="btn outline">
+Open Playground
+</a>
+
+</section>
+
+</main>
+
+
+<footer>
+
+<div class="footer-logo">CodeLearn</div>
+
+<p>
+Learn. Practice. Build. Repeat.
+</p>
+
+<p style="margin-top:15px;font-size:13px;">
+© 2026 CodeLearn • Created for learning
+</p>
+
+</footer>
+
+
+<script>
+
+/* DARK MODE */
+
+function toggleTheme(){
+
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "theme",
+        document.body.classList.contains("dark")
+        ? "dark"
+        : "light"
+    );
+}
+
+if(localStorage.getItem("theme")==="dark"){
+    document.body.classList.add("dark");
+}
+
+
+/* MOBILE MENU */
+
+function toggleMenu(){
+
+    document
+    .getElementById("navLinks")
+    .classList.toggle("show");
+
+}
+
+
+/* CODE PLAYGROUND */
+
+function runCode(){
+
+    const code =
+    document.getElementById("codeEditor").value;
+
+    document
+    .getElementById("preview")
+    .srcdoc = code;
+
+}
+
+
+/* INITIAL PREVIEW */
+
+window.onload=function(){
+    runCode();
+};
+
+
+/* SEARCH */
+
+function searchCourses(){
+
+    const input =
+    document
+    .getElementById("courseSearch")
+    .value
+    .toLowerCase();
+
+    const courses =
+    document
+    .querySelectorAll(".course");
+
+    courses.forEach(course=>{
+
+        const name =
+        course
+        .querySelector("h3")
+        .textContent
+        .toLowerCase();
+
+        course.style.display =
+        name.includes(input)
+        ? "block"
+        : "none";
+
+    });
+
+}
+
+
+/* QUIZ */
+
+function checkAnswer(correct){
+
+    const result =
+    document
+    .getElementById("quizResult");
+
+    if(correct){
+
+        result.innerHTML =
+        "🎉 Correct! The &lt;a&gt; tag creates hyperlinks.";
+
+        result.style.color =
+        "#00b894";
+
+    }else{
+
+        result.innerHTML =
+        "❌ Not quite. Try again!";
+
+        result.style.color =
+        "#e74c3c";
+
+    }
+
+}
+
+
+/* SCROLL REVEAL */
+
+const observer =
+new IntersectionObserver(
+entries=>{
+
+    entries.forEach(entry=>{
+
+        if(entry.isIntersecting){
+
+            entry.target
+            .classList
+            .add("active");
+
+        }
+
+    });
+
+},
+{
+    threshold:.15
+});
+
+
+document
+.querySelectorAll(".reveal")
+.forEach(el=>{
+    observer.observe(el);
+});
+
+</script>
+
+</body>
+</html>
