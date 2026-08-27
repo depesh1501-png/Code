@@ -1,0 +1,684 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CodeLearn - Learn to Code</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- ================= TOP HEADER ================= -->
+
+<header class="header">
+
+    <div class="logo">
+        <span>&lt;/&gt;</span>
+        <strong>CodeLearn</strong>
+    </div>
+
+    <nav class="main-nav">
+        <a href="#tutorials">Tutorials</a>
+        <a href="#references">References</a>
+        <a href="#exercises">Exercises</a>
+        <a href="#certificates">Certificates</a>
+    </nav>
+
+    <div class="header-right">
+
+        <div class="search">
+            <input type="text" placeholder="Search tutorials...">
+            <button>⌕</button>
+        </div>
+
+        <button class="theme-btn">☾</button>
+
+        <button class="login-btn">Log in</button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= LANGUAGE BAR ================= -->
+
+<div class="language-bar">
+
+    <a href="#">HTML</a>
+    <a href="#">CSS</a>
+    <a href="#">JavaScript</a>
+    <a href="#">SQL</a>
+    <a href="#">Python</a>
+    <a href="#">Java</a>
+    <a href="#">PHP</a>
+    <a href="#">C</a>
+    <a href="#">C++</a>
+    <a href="#">C#</a>
+    <a href="#">React</a>
+    <a href="#">Node.js</a>
+    <a href="#">Bootstrap</a>
+    <a href="#">Git</a>
+
+</div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <h1>Learn to Code</h1>
+
+        <p>
+            Free tutorials, examples and references.
+            Start learning today.
+        </p>
+
+        <div class="hero-search">
+
+            <input
+                type="text"
+                placeholder="Search our tutorials, e.g. HTML"
+            >
+
+            <button>🔍</button>
+
+        </div>
+
+        <div class="hero-links">
+            <a href="#">Not sure where to start?</a>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= TUTORIALS ================= -->
+
+<section class="section" id="tutorials">
+
+    <div class="section-heading">
+
+        <h2>Learn to Code</h2>
+
+        <p>
+            Learn popular programming and web development technologies
+            with simple examples.
+        </p>
+
+    </div>
+
+
+    <!-- HTML -->
+
+    <div class="tutorial-card html-card">
+
+        <div class="tutorial-info">
+
+            <h2>HTML</h2>
+
+            <p>The language for building web pages</p>
+
+            <div class="card-buttons">
+                <a href="#" class="green-btn">Learn HTML</a>
+                <a href="#" class="white-btn">HTML Reference</a>
+            </div>
+
+        </div>
+
+
+        <div class="code-example">
+
+            <h3>HTML Example:</h3>
+
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;HTML Tutorial&lt;/title&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+&lt;h1&gt;This is a heading&lt;/h1&gt;
+
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+            <button class="try-btn">Try it Yourself »</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- CSS -->
+
+    <div class="tutorial-card css-card">
+
+        <div class="tutorial-info">
+
+            <h2>CSS</h2>
+
+            <p>The language for styling web pages</p>
+
+            <div class="card-buttons">
+                <a href="#" class="green-btn">Learn CSS</a>
+                <a href="#" class="white-btn">CSS Reference</a>
+            </div>
+
+        </div>
+
+
+        <div class="code-example">
+
+            <h3>CSS Example:</h3>
+
+            <pre><code>body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-family: Arial;
+}</code></pre>
+
+            <button class="try-btn">Try it Yourself »</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <div class="tutorial-card js-card">
+
+        <div class="tutorial-info">
+
+            <h2>JavaScript</h2>
+
+            <p>The language for programming web pages</p>
+
+            <div class="card-buttons">
+                <a href="#" class="green-btn">Learn JavaScript</a>
+                <a href="#" class="white-btn">JS Reference</a>
+            </div>
+
+        </div>
+
+
+        <div class="code-example">
+
+            <h3>JavaScript Example:</h3>
+
+            <pre><code>&lt;button onclick="myFunction()"&gt;
+Click Me
+&lt;/button&gt;
+
+&lt;script&gt;
+
+function myFunction() {
+    alert("Hello World!");
+}
+
+&lt;/script&gt;</code></pre>
+
+            <button class="try-btn">Try it Yourself »</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- PYTHON -->
+
+    <div class="tutorial-card python-card">
+
+        <div class="tutorial-info">
+
+            <h2>Python</h2>
+
+            <p>A popular programming language</p>
+
+            <div class="card-buttons">
+                <a href="#" class="green-btn">Learn Python</a>
+                <a href="#" class="white-btn">Python Reference</a>
+            </div>
+
+        </div>
+
+
+        <div class="code-example">
+
+            <h3>Python Example:</h3>
+
+            <pre><code>if 5 > 2:
+    print("Five is greater than two!")</code></pre>
+
+            <button class="try-btn">Try it Yourself »</button>
+
+        </div>
+
+    </div>
+
+
+    <!-- SQL -->
+
+    <div class="tutorial-card sql-card">
+
+        <div class="tutorial-info">
+
+            <h2>SQL</h2>
+
+            <p>A language for accessing databases</p>
+
+            <div class="card-buttons">
+                <a href="#" class="green-btn">Learn SQL</a>
+                <a href="#" class="white-btn">SQL Reference</a>
+            </div>
+
+        </div>
+
+
+        <div class="code-example">
+
+            <h3>SQL Example:</h3>
+
+            <pre><code>SELECT *
+FROM Customers
+WHERE Country = 'India';</code></pre>
+
+            <button class="try-btn">Try it Yourself »</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= LANGUAGE GRID ================= -->
+
+<section class="languages" id="references">
+
+    <div class="section-heading">
+
+        <h2>Explore More Technologies</h2>
+
+        <p>Choose a technology and start learning.</p>
+
+    </div>
+
+
+    <div class="language-grid">
+
+        <div class="language-box">
+            <h2>PHP</h2>
+            <p>Server-side scripting</p>
+            <button>Learn PHP</button>
+        </div>
+
+        <div class="language-box">
+            <h2>Java</h2>
+            <p>Object-oriented programming</p>
+            <button>Learn Java</button>
+        </div>
+
+        <div class="language-box">
+            <h2>C++</h2>
+            <p>Powerful programming language</p>
+            <button>Learn C++</button>
+        </div>
+
+        <div class="language-box">
+            <h2>C</h2>
+            <p>Low-level programming</p>
+            <button>Learn C</button>
+        </div>
+
+        <div class="language-box">
+            <h2>React</h2>
+            <p>Build user interfaces</p>
+            <button>Learn React</button>
+        </div>
+
+        <div class="language-box">
+            <h2>Node.js</h2>
+            <p>Server-side JavaScript</p>
+            <button>Learn Node.js</button>
+        </div>
+
+        <div class="language-box">
+            <h2>Bootstrap</h2>
+            <p>Responsive web design</p>
+            <button>Learn Bootstrap</button>
+        </div>
+
+        <div class="language-box">
+            <h2>Git</h2>
+            <p>Version control system</p>
+            <button>Learn Git</button>
+        </div>
+
+        <div class="language-box">
+            <h2>MySQL</h2>
+            <p>Database management</p>
+            <button>Learn MySQL</button>
+        </div>
+
+        <div class="language-box">
+            <h2>TypeScript</h2>
+            <p>Typed JavaScript</p>
+            <button>Learn TypeScript</button>
+        </div>
+
+        <div class="language-box">
+            <h2>Angular</h2>
+            <p>Frontend framework</p>
+            <button>Learn Angular</button>
+        </div>
+
+        <div class="language-box">
+            <h2>MongoDB</h2>
+            <p>NoSQL database</p>
+            <button>Learn MongoDB</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= EXERCISES ================= -->
+
+<section class="practice-section" id="exercises">
+
+    <div class="practice-content">
+
+        <h2>Exercises and Quizzes</h2>
+
+        <p>
+            Test your coding knowledge with interactive exercises,
+            quizzes and challenges.
+        </p>
+
+        <div class="practice-buttons">
+
+            <button>Exercises</button>
+            <button>Quizzes</button>
+            <button>Challenges</button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CODE EDITOR ================= -->
+
+<section class="editor-section">
+
+    <div class="editor-container">
+
+        <div class="editor-text">
+
+            <h2>Code Editor</h2>
+
+            <p>
+                Write HTML, CSS and JavaScript and see the
+                result instantly in your browser.
+            </p>
+
+            <button class="green-btn big-btn">
+                Try Online Editor
+            </button>
+
+        </div>
+
+
+        <div class="editor-window">
+
+            <div class="editor-top">
+
+                <span class="dot red"></span>
+                <span class="dot yellow"></span>
+                <span class="dot green"></span>
+
+                <span class="editor-title">
+                    index.html
+                </span>
+
+            </div>
+
+            <div class="editor-code">
+
+<pre><code>&lt;!DOCTYPE html&gt;
+
+&lt;html&gt;
+
+&lt;head&gt;
+    &lt;style&gt;
+
+        body {
+            background:#f1f1f1;
+        }
+
+        h1 {
+            color:#04AA6D;
+        }
+
+    &lt;/style&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+
+    &lt;h1&gt;Hello World!&lt;/h1&gt;
+
+&lt;/body&gt;
+
+&lt;/html&gt;</code></pre>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= PROJECTS ================= -->
+
+<section class="projects">
+
+    <h2>Build Real Projects</h2>
+
+    <p>
+        Learn by building websites and applications.
+    </p>
+
+    <div class="project-grid">
+
+        <div class="project-card">
+            <div class="project-icon">🌐</div>
+            <h3>Personal Website</h3>
+            <p>Create your own responsive portfolio.</p>
+            <button>Start Project</button>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">💻</div>
+            <h3>Web Application</h3>
+            <p>Build an interactive web application.</p>
+            <button>Start Project</button>
+        </div>
+
+        <div class="project-card">
+            <div class="project-icon">🚀</div>
+            <h3>Landing Page</h3>
+            <p>Design a modern professional landing page.</p>
+            <button>Start Project</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= CERTIFICATES ================= -->
+
+<section class="certificate-section" id="certificates">
+
+    <div class="certificate-content">
+
+        <h2>Kickstart Your Career</h2>
+
+        <p>
+            Improve your skills and demonstrate your knowledge
+            with professional certificates.
+        </p>
+
+        <button>Get Started</button>
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW TO ================= -->
+
+<section class="howto">
+
+    <h2>How To</h2>
+
+    <p>
+        Discover useful HTML, CSS and JavaScript techniques.
+    </p>
+
+    <div class="howto-card">
+
+        <div class="slideshow">
+
+            <div class="slide-number">
+                1 / 3
+            </div>
+
+            <div class="fake-image">
+                <h2>Simple Slideshow</h2>
+                <p>Learn how to create beautiful web components.</p>
+            </div>
+
+            <div class="slide-buttons">
+                <button>❮ Previous</button>
+                <button>Next ❯</button>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <div class="footer-top">
+
+        <div class="footer-brand">
+
+            <div class="footer-logo">
+                &lt;/&gt; CodeLearn
+            </div>
+
+            <p>
+                Learn coding with simple examples,
+                tutorials and interactive exercises.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Top Tutorials</h3>
+
+            <a href="#">HTML Tutorial</a>
+            <a href="#">CSS Tutorial</a>
+            <a href="#">JavaScript Tutorial</a>
+            <a href="#">Python Tutorial</a>
+            <a href="#">SQL Tutorial</a>
+            <a href="#">Java Tutorial</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>References</h3>
+
+            <a href="#">HTML Reference</a>
+            <a href="#">CSS Reference</a>
+            <a href="#">JavaScript Reference</a>
+            <a href="#">Python Reference</a>
+            <a href="#">SQL Reference</a>
+            <a href="#">Java Reference</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Resources</h3>
+
+            <a href="#">Exercises</a>
+            <a href="#">Quizzes</a>
+            <a href="#">Projects</a>
+            <a href="#">Templates</a>
+            <a href="#">Code Editor</a>
+            <a href="#">Certificates</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <div class="socials">
+
+            <span>f</span>
+            <span>𝕏</span>
+            <span>in</span>
+            <span>▶</span>
+
+        </div>
+
+        <p>
+            © 2026 CodeLearn. Built for educational purposes.
+        </p>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
